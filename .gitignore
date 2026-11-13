@@ -1,0 +1,10 @@
+bin/
+obj/
+publish/
+TestResults/
+*.zip
+.vs/
+.vscode/
+.idea/
+*.user
+.platform/

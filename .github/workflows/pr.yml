@@ -1,0 +1,13 @@
+name: PR
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: JMa9-Dev/platform/.github/workflows/dotnet-ci.yml@main
