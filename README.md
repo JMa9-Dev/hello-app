@@ -19,7 +19,8 @@ dotnet format --verify-no-changes
 ## Pipeline
 
 - `pr.yml` – build, `dotnet format` lint and tests on every pull request.
-- `deploy.yml` – on push to `main`: CI → publish → deploy **dev** → approval → deploy **prod**.
+- `deploy.yml` – on push to `main`: CI → publish → deploy **dev**. A prod stage is added
+  when the app is ready for real use (see the platform README).
 
-Infrastructure is defined in `infra/*.bicepparam`, which use the shared template
+Infrastructure is defined in `infra/dev.bicepparam`, which use the shared template
 `infra/appservice/main.bicep` from the platform repository.

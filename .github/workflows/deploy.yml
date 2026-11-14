@@ -32,12 +32,3 @@ jobs:
       environment: dev
       app-name: hello-app
 
-  deploy-prod:
-    needs: deploy-dev
-    uses: JMa9-Dev/platform/.github/workflows/deploy-appservice.yml@main
-    permissions:
-      id-token: write
-      contents: read
-    with:
-      environment: prod
-      app-name: hello-app
